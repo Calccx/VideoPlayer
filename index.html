@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>播放器</title>
+    <link rel="stylesheet" href="beauti.css">
+    <script type="text/javascript" src="button.js">  //src:引入js文件的路径
+    </script>
+
+</head>
+<!--设置图片路径-->
+
+<body>
+    <div class="videoContainer" align="center">
+        <video id="videoPlayer" ontimeupdate="progressUpdate()" width="640" height="440" controls="controls">
+        </video>
+    </div>
+    <div id="positionBar" align="center"><span id="displayStatus">时间</span></div>
+    <div class="top" align="center">
+        <button class="button-3d-1" onclick="play()">播放</button>
+        <button onclick="pause()">暂停</button>
+        <button onclick="stop()">重新开始</button>
+    </div>
+    <div class="fileinput" align="center">
+        <input type="file" id="file" onchange="VideoInput()">
+    </div>
+</body>
+
+</html>
